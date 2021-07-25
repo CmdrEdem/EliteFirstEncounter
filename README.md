@@ -1,2 +1,2 @@
 # EliteFirstEncounter
-A Journal Parser specialised in cataloging discoveries.
+A Elite: Dangerous Journal Parser specialised in cataloging discoveries.
