@@ -1,0 +1,5 @@
+
+*.pfx
+*.user
+/EliteFirstEncounter/obj
+/EliteJsonParser/obj
