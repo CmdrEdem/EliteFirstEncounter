@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EliteFirstEncounter
+namespace EliteFirstEncounter.view.gui
 {
     partial class AboutBoxCustom : Form
     {

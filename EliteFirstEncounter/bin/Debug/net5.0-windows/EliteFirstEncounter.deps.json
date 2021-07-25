@@ -9,10 +9,23 @@
       "EliteFirstEncounter/0.1.0": {
         "dependencies": {
           "EliteJsonParser": "1.0.0",
-          "Newtonsoft.Json": "13.0.1"
+          "Microsoft.Data.Sqlite.Core": "5.0.8",
+          "Newtonsoft.Json": "13.0.1",
+          "SQLitePCLRaw.bundle_winsqlite3": "2.0.4"
         },
         "runtime": {
           "EliteFirstEncounter.dll": {}
+        }
+      },
+      "Microsoft.Data.Sqlite.Core/5.0.8": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Data.Sqlite.dll": {
+            "assemblyVersion": "5.0.8.0",
+            "fileVersion": "5.0.821.31512"
+          }
         }
       },
       "Newtonsoft.Json/13.0.1": {
@@ -23,6 +36,41 @@
           }
         }
       },
+      "SQLitePCLRaw.bundle_winsqlite3/2.0.4": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4",
+          "SQLitePCLRaw.provider.winsqlite3": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.batteries_v2.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
+        }
+      },
+      "SQLitePCLRaw.core/2.0.4": {
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.core.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
+        }
+      },
+      "SQLitePCLRaw.provider.winsqlite3/2.0.4": {
+        "dependencies": {
+          "SQLitePCLRaw.core": "2.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SQLitePCLRaw.provider.winsqlite3.dll": {
+            "assemblyVersion": "2.0.4.976",
+            "fileVersion": "2.0.4.976"
+          }
+        }
+      },
+      "System.Memory/4.5.3": {},
       "EliteJsonParser/1.0.0": {
         "runtime": {
           "EliteJsonParser.dll": {}
@@ -36,12 +84,47 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Microsoft.Data.Sqlite.Core/5.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aUID+pk/IDq6Wuo1/dSE4neNRgNsCRsfFaFto5vwSj8JvZCnpfzZaC6SN2mVZVmBPYGXD9F1IG4ouONYF1zTUw==",
+      "path": "microsoft.data.sqlite.core/5.0.8",
+      "hashPath": "microsoft.data.sqlite.core.5.0.8.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "SQLitePCLRaw.bundle_winsqlite3/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8AU/bIPizsp7hN1l9ZPpK4e/X0wWNlnP5fIfPOcc2IF7j3bSJJugzQI1vZ82HYa9Tw7yjqPyj0kZ2zhYIqKjqg==",
+      "path": "sqlitepclraw.bundle_winsqlite3/2.0.4",
+      "hashPath": "sqlitepclraw.bundle_winsqlite3.2.0.4.nupkg.sha512"
+    },
+    "SQLitePCLRaw.core/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4XlDZpDAsboMD6qZQcz9AaKblKDUTVHF+8f3lvbP7QjoqSRr2Xc0Lm34IK2pjRIYnyFLhI3yOJ5YWfOiCid2yg==",
+      "path": "sqlitepclraw.core/2.0.4",
+      "hashPath": "sqlitepclraw.core.2.0.4.nupkg.sha512"
+    },
+    "SQLitePCLRaw.provider.winsqlite3/2.0.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-a9b5yT5EB9JIgc03SI3Ut1tvUml87NFyGU+4SAl59q4u9akwLMVNVZXGPLa+aaGUwVzxoVNPh3SPUFds7zk4fQ==",
+      "path": "sqlitepclraw.provider.winsqlite3/2.0.4",
+      "hashPath": "sqlitepclraw.provider.winsqlite3.2.0.4.nupkg.sha512"
+    },
+    "System.Memory/4.5.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "path": "system.memory/4.5.3",
+      "hashPath": "system.memory.4.5.3.nupkg.sha512"
     },
     "EliteJsonParser/1.0.0": {
       "type": "project",

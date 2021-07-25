@@ -22,13 +22,13 @@ namespace EliteJsonParser.Model
         [JsonProperty(PropertyName = "event")]
         public string _event;
 
-        public static bool unitTest()
+        public static bool UnitTest()
         {
             Console.SetError(new StreamWriter("error.log"));
             try
             {
-                StreamReader sellOrganicFile = new StreamReader(".\\Sample Data\\SellOrganicData.json", Encoding.UTF8);
-                StreamReader scanOrganicAnalyseFile = new StreamReader(".\\Sample Data\\ScanOrganic Analyse.json", Encoding.UTF8);
+                StreamReader sellOrganicFile = new StreamReader(".\\Test Journals\\SellOrganicData.json", Encoding.UTF8);
+                StreamReader scanOrganicAnalyseFile = new StreamReader(".\\Test Journals\\ScanOrganic Analyse.json", Encoding.UTF8);
 
                 string jsonLine = sellOrganicFile.ReadLine();
 

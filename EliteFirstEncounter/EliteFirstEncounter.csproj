@@ -5,7 +5,7 @@
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <AssemblyName>EliteFirstEncounter</AssemblyName>
-    <StartupObject></StartupObject>
+    <StartupObject>EliteExplorer.EliteFirstEncounter</StartupObject>
     <RootNamespace>EliteFirstEncounter</RootNamespace>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>NCS2021.pfx</AssemblyOriginatorKeyFile>
@@ -19,12 +19,25 @@
     <Description>A journal parser for Elite: Dangerous. Focussed on exploration and registration of first occurrences.</Description>
     <Copyright>Original code - Daniel Macedo. Elite is a copyright of Frontier Developments. All Rights Reserved.</Copyright>
     <NeutralLanguage>en-CA</NeutralLanguage>
-    <AssemblyVersion>0.1.0.1</AssemblyVersion>
-    <FileVersion>0.1.0.1</FileVersion>
+    <AssemblyVersion>0.1.0.2</AssemblyVersion>
+    <FileVersion>0.1.0.2</FileVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Model\Json\**" />
+    <EmbeddedResource Remove="Model\Json\**" />
+    <None Remove="Model\Json\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="5.0.8" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="SQLitePCLRaw.bundle_winsqlite3" Version="2.0.4" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,22 +45,29 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Properties\Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <Folder Include="Model\" />
+    <Folder Include="Test Journals\" />
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Properties\Resources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Model\Json\" />
+    <None Update="database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="External\sqlite3.def">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="External\sqlite3.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\database.db">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Test Journals\ScanOrganic Analyse.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Test Journals\SellOrganicData.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

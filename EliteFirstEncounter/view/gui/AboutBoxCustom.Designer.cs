@@ -1,5 +1,5 @@
 ﻿
-namespace EliteFirstEncounter
+namespace EliteFirstEncounter.view.gui
 {
     partial class AboutBoxCustom
     {

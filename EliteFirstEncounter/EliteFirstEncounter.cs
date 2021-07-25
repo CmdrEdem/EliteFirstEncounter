@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using EliteJsonParser;
+using EliteExplorer.view.gui;
 
 namespace EliteExplorer
 {
@@ -17,7 +18,7 @@ namespace EliteExplorer
         static void Main()
         {
             Console.WriteLine("JsonEliteJournalEntry unity test");
-            EliteJsonParser.Model.JsonEliteJournalEntry.unitTest();
+            EliteJsonParser.Model.JsonEliteJournalEntry.UnitTest();
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

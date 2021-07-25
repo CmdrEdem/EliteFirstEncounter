@@ -1,5 +1,5 @@
 ﻿
-namespace EliteExplorer
+namespace EliteExplorer.view.gui
 {
     partial class MainWindow
     {
@@ -37,7 +37,10 @@ namespace EliteExplorer
             this.labelDateEnd = new System.Windows.Forms.Label();
             this.labelProgress = new System.Windows.Forms.Label();
             this.menuStripMain = new System.Windows.Forms.MenuStrip();
-            this.buttonAbout = new System.Windows.Forms.Button();
+            this.optionsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // discoveryViewer
@@ -97,28 +100,42 @@ namespace EliteExplorer
             // 
             // menuStripMain
             // 
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.optionsToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
             this.menuStripMain.Size = new System.Drawing.Size(800, 24);
             this.menuStripMain.TabIndex = 7;
             this.menuStripMain.Text = "menuStrip1";
             // 
-            // buttonAbout
+            // optionsToolStripMenuItem
             // 
-            this.buttonAbout.Location = new System.Drawing.Point(0, 0);
-            this.buttonAbout.Name = "buttonAbout";
-            this.buttonAbout.Size = new System.Drawing.Size(75, 23);
-            this.buttonAbout.TabIndex = 8;
-            this.buttonAbout.Text = "About";
-            this.buttonAbout.UseVisualStyleBackColor = true;
-            this.buttonAbout.Click += new System.EventHandler(this.buttonAbout_Click);
+            this.optionsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.settingsToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.optionsToolStripMenuItem.Name = "optionsToolStripMenuItem";
+            this.optionsToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.optionsToolStripMenuItem.Text = "Options";
+            // 
+            // settingsToolStripMenuItem
+            // 
+            this.settingsToolStripMenuItem.Name = "settingsToolStripMenuItem";
+            this.settingsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.settingsToolStripMenuItem.Text = "Settings";
+            this.settingsToolStripMenuItem.Click += new System.EventHandler(this.settingsToolStripMenuItem_Click);
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonAbout);
             this.Controls.Add(this.labelProgress);
             this.Controls.Add(this.labelDateEnd);
             this.Controls.Add(this.progressBar1);
@@ -131,6 +148,8 @@ namespace EliteExplorer
             this.Name = "MainWindow";
             this.Text = "Elite: Dangerous - First Encounter";
             this.Load += new System.EventHandler(this.MainWindow_Load);
+            this.menuStripMain.ResumeLayout(false);
+            this.menuStripMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,7 +165,9 @@ namespace EliteExplorer
         private System.Windows.Forms.Label labelDateEnd;
         private System.Windows.Forms.Label labelProgress;
         private System.Windows.Forms.MenuStrip menuStripMain;
-        private System.Windows.Forms.Button buttonAbout;
+        private System.Windows.Forms.ToolStripMenuItem optionsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 
